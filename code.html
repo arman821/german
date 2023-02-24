@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Value Submission</title>
+</head>
+<body>
+	<form onsubmit="submitValue(event)">
+		<label for="valueInput">Enter a value:</label>
+		<input type="text" id="valueInput" name="valueInput">
+		<button type="submit">Submit</button>
+	</form>
+
+	<script>
+		function submitValue(event) {
+			event.preventDefault(); // prevent the form from submitting normally
+			var value = document.getElementById("valueInput").value;
+			window.location.href = "http://www.domain.com/" + value;
+		}
+	</script>
+</body>
+</html>
